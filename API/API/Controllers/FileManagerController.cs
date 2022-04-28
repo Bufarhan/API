@@ -19,12 +19,12 @@ namespace API.Controllers
 
 
         [HttpGet("GetAll")]
-        public ActionResult<List<FileResponse>> GetAll() =>
+        public IActionResult GetAll() =>
              Ok(_fileManagerService.GetAll());
 
 
         [HttpPost("Add")]
-        public ActionResult<FileResponse> AddOrUpdate()
+        public IActionResult AddOrUpdate()
         {
 
 
