@@ -18,7 +18,7 @@ export class FilesViewComponent implements OnInit {
   this.fileManagerService.items.subscribe(data=>this.items=data );
 }
   ngOnInit(): void {
-    this.fileManagerService.getAll().subscribe({next:(data)=>this.items=data, error:(err)=>alert(err)});
+    this.fileManagerService.getAll().subscribe();
   }
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
