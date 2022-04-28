@@ -1,0 +1,12 @@
+<div class="card-body">
+    <label for="fileSelector" class="w-100 text-center" style="cursor: pointer;"  > 
+        Click to select your file
+     </label>
+     <h4 class="text-center">{{selectedFile?.name}}</h4>
+
+    <input #fileInput type="file"  style="display: none;" id="fileSelector"  accept="image/*"
+    (change)="processFile(fileInput)"/>
+</div>
+<div class="card-footer">
+    <button class="btn btn-success w-100" [disabled]="!selectedFile" (click)="submit()">Upload</button>
+</div>
